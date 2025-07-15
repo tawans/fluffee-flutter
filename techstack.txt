@@ -1,0 +1,177 @@
+📄 기술 스택 & 개발 지침
+1. 📱 클라이언트: 모바일 앱
+플랫폼: Flutter (Android & iOS)
+
+언어: Dart
+
+아키텍처: Clean Architecture
+
+Domain, Data, Presentation 레이어를 명확히 분리
+
+의존성 역전 & SOLID 원칙 준수
+
+2. 🔧 주요 라이브러리 & 도구 (클라이언트)
+📦 라이브러리/도구	📝 역할
+Riverpod (CodeGen)	상태 관리
+Freezed	데이터 클래스, sealed class, 불변성
+GetIt	의존성 주입 컨테이너
+Injectable	의존성 자동 등록
+GoRouter	선언형 라우팅
+JsonSerializable (선택)	API 모델 직렬화/역직렬화
+build_runner	코드 생성 도구
+
+3. 🗄️ 백엔드: Supabase
+Supabase = Firebase 대안의 오픈소스 백엔드
+
+Postgres 기반의 데이터베이스
+
+인증(Authentication) 지원
+
+실시간 데이터(Subscriptions) 지원
+
+스토리지 지원 (이미지, 파일)
+
+REST & GraphQL API 자동 제공
+
+Row Level Security를 통한 데이터 접근 제어
+
+4. 🎯 각 기술의 사용 목적 & 가이드
+✅ Clean Architecture
+domain/ : 핵심 비즈니스 로직 (entity, repository interface, use case)
+
+data/ : 데이터 소스 (Supabase API, repository 구현체)
+
+presentation/ : UI, 상태 관리
+
+의존성 방향: presentation → domain → data
+
+✅ Riverpod (CodeGen)
+상태 관리 표준
+
+@riverpod 애너테이션 기반 코드 생성
+
+예시:
+
+dart
+복사
+편집
+@riverpod
+class Counter extends _$Counter {
+  @override
+  int build() => 0;
+  void increment() => state++;
+}
+✅ GetIt & Injectable
+의존성 주입 (DI)
+
+GetIt: DI 컨테이너
+
+Injectable: DI 자동 등록
+
+예시:
+
+dart
+복사
+편집
+@module
+abstract class RegisterModule {
+  @lazySingleton
+  SupabaseClient get supabaseClient =>
+    SupabaseClient('url', 'anonKey');
+}
+dart
+복사
+편집
+final getIt = GetIt.instance;
+await configureDependencies(); // 실행
+✅ Freezed
+데이터 모델 정의
+불변성, 패턴 매칭, copyWith, JSON 직렬화 지원
+
+✅ Supabase
+인증
+
+이메일/비밀번호 로그인 & 소셜 로그인 지원
+
+데이터베이스
+
+Postgres + RLS
+
+테이블, 뷰, 함수 정의
+
+스토리지
+
+이미지, 파일 업로드
+
+리얼타임
+
+실시간 구독으로 상태 갱신
+
+Flutter SDK 제공
+
+5. 📝 코드 스타일 & 규칙
+상태는 불변성 유지 (const, freezed 사용)
+
+상태 관리는 반드시 Riverpod로
+
+DI는 반드시 GetIt + Injectable로
+
+라우팅은 반드시 GoRouter로
+
+비즈니스 로직은 UseCase를 통해 실행
+
+API/DB 접근은 Repository 패턴으로
+
+폴더 구조는 레이어별로 구분 (presentation/, domain/, data/)
+
+6. 📁 프로젝트 폴더 구조 예시
+bash
+복사
+편집
+lib/
+├── core/                # 공통 유틸, 에러 처리
+├── data/                # Supabase 연동, repository 구현
+│   ├── datasource/
+│   ├── repository/
+│   └── models/
+├── domain/              # entity, usecase, repository interface
+├── presentation/        # UI, ViewModel, 상태
+│   ├── pages/
+│   ├── widgets/
+│   └── viewmodel/
+├── di/                  # GetIt & Injectable 설정
+└── main.dart            # 진입점
+7. 🚀 개발 명령어 & 팁
+코드 생성:
+
+bash
+복사
+편집
+flutter pub run build_runner build --delete-conflicting-outputs
+Supabase CLI (선택):
+
+bash
+복사
+편집
+supabase start
+supabase db push
+디버그 실행:
+
+bash
+복사
+편집
+flutter run
+린트 & 포맷:
+
+bash
+복사
+편집
+dart format .
+flutter analyze
+📌 요약
+✅ 클린 아키텍처: 유지보수성과 테스트 용이성을 확보
+✅ Riverpod (CodeGen): 타입 안정적 상태 관리
+✅ GetIt + Injectable: 느슨한 결합의 의존성 주입
+✅ Freezed: 불변 데이터 모델
+✅ GoRouter: 선언적 라우팅
+✅ Supabase: 인증, DB, 스토리지, 실시간 기능 제공
