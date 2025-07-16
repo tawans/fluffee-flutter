@@ -9,5 +9,6 @@ class Failure with _$Failure {
   const factory Failure.network([String? message]) = NetworkFailure;
   const factory Failure.auth([String? message]) = AuthFailure;
   const factory Failure.validation([String? message]) = ValidationFailure;
+  const factory Failure.location([String? message]) = LocationFailure;
   const factory Failure.unknown([String? message]) = UnknownFailure;
 }

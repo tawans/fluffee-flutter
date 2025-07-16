@@ -5,9 +5,9 @@ class AppConstants {
   static const String appName = 'Fluffee';
   static const String appTagline = 'cozy vibes in every cup';
   
-  // Supabase
-  static const String supabaseUrl = 'YOUR_SUPABASE_URL';
-  static const String supabaseAnonKey = 'YOUR_SUPABASE_ANON_KEY';
+  // Supabase - 실제 배포시에는 환경변수나 별도 설정 파일에서 읽어와야 합니다
+  static const String supabaseUrl = 'https://placeholder.supabase.co';
+  static const String supabaseAnonKey = 'placeholder-anon-key';
   
   // API
   static const Duration apiTimeout = Duration(seconds: 30);

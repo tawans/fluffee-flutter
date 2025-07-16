@@ -25,6 +25,7 @@ mixin _$Failure {
     required TResult Function(String? message) network,
     required TResult Function(String? message) auth,
     required TResult Function(String? message) validation,
+    required TResult Function(String? message) location,
     required TResult Function(String? message) unknown,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,6 +35,7 @@ mixin _$Failure {
     TResult? Function(String? message)? network,
     TResult? Function(String? message)? auth,
     TResult? Function(String? message)? validation,
+    TResult? Function(String? message)? location,
     TResult? Function(String? message)? unknown,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -43,6 +45,7 @@ mixin _$Failure {
     TResult Function(String? message)? network,
     TResult Function(String? message)? auth,
     TResult Function(String? message)? validation,
+    TResult Function(String? message)? location,
     TResult Function(String? message)? unknown,
     required TResult orElse(),
   }) => throw _privateConstructorUsedError;
@@ -53,6 +56,7 @@ mixin _$Failure {
     required TResult Function(NetworkFailure value) network,
     required TResult Function(AuthFailure value) auth,
     required TResult Function(ValidationFailure value) validation,
+    required TResult Function(LocationFailure value) location,
     required TResult Function(UnknownFailure value) unknown,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -62,6 +66,7 @@ mixin _$Failure {
     TResult? Function(NetworkFailure value)? network,
     TResult? Function(AuthFailure value)? auth,
     TResult? Function(ValidationFailure value)? validation,
+    TResult? Function(LocationFailure value)? location,
     TResult? Function(UnknownFailure value)? unknown,
   }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -71,6 +76,7 @@ mixin _$Failure {
     TResult Function(NetworkFailure value)? network,
     TResult Function(AuthFailure value)? auth,
     TResult Function(ValidationFailure value)? validation,
+    TResult Function(LocationFailure value)? location,
     TResult Function(UnknownFailure value)? unknown,
     required TResult orElse(),
   }) => throw _privateConstructorUsedError;
@@ -193,6 +199,7 @@ class _$ServerFailureImpl implements ServerFailure {
     required TResult Function(String? message) network,
     required TResult Function(String? message) auth,
     required TResult Function(String? message) validation,
+    required TResult Function(String? message) location,
     required TResult Function(String? message) unknown,
   }) {
     return server(message);
@@ -206,6 +213,7 @@ class _$ServerFailureImpl implements ServerFailure {
     TResult? Function(String? message)? network,
     TResult? Function(String? message)? auth,
     TResult? Function(String? message)? validation,
+    TResult? Function(String? message)? location,
     TResult? Function(String? message)? unknown,
   }) {
     return server?.call(message);
@@ -219,6 +227,7 @@ class _$ServerFailureImpl implements ServerFailure {
     TResult Function(String? message)? network,
     TResult Function(String? message)? auth,
     TResult Function(String? message)? validation,
+    TResult Function(String? message)? location,
     TResult Function(String? message)? unknown,
     required TResult orElse(),
   }) {
@@ -236,6 +245,7 @@ class _$ServerFailureImpl implements ServerFailure {
     required TResult Function(NetworkFailure value) network,
     required TResult Function(AuthFailure value) auth,
     required TResult Function(ValidationFailure value) validation,
+    required TResult Function(LocationFailure value) location,
     required TResult Function(UnknownFailure value) unknown,
   }) {
     return server(this);
@@ -249,6 +259,7 @@ class _$ServerFailureImpl implements ServerFailure {
     TResult? Function(NetworkFailure value)? network,
     TResult? Function(AuthFailure value)? auth,
     TResult? Function(ValidationFailure value)? validation,
+    TResult? Function(LocationFailure value)? location,
     TResult? Function(UnknownFailure value)? unknown,
   }) {
     return server?.call(this);
@@ -262,6 +273,7 @@ class _$ServerFailureImpl implements ServerFailure {
     TResult Function(NetworkFailure value)? network,
     TResult Function(AuthFailure value)? auth,
     TResult Function(ValidationFailure value)? validation,
+    TResult Function(LocationFailure value)? location,
     TResult Function(UnknownFailure value)? unknown,
     required TResult orElse(),
   }) {
@@ -363,6 +375,7 @@ class _$CacheFailureImpl implements CacheFailure {
     required TResult Function(String? message) network,
     required TResult Function(String? message) auth,
     required TResult Function(String? message) validation,
+    required TResult Function(String? message) location,
     required TResult Function(String? message) unknown,
   }) {
     return cache(message);
@@ -376,6 +389,7 @@ class _$CacheFailureImpl implements CacheFailure {
     TResult? Function(String? message)? network,
     TResult? Function(String? message)? auth,
     TResult? Function(String? message)? validation,
+    TResult? Function(String? message)? location,
     TResult? Function(String? message)? unknown,
   }) {
     return cache?.call(message);
@@ -389,6 +403,7 @@ class _$CacheFailureImpl implements CacheFailure {
     TResult Function(String? message)? network,
     TResult Function(String? message)? auth,
     TResult Function(String? message)? validation,
+    TResult Function(String? message)? location,
     TResult Function(String? message)? unknown,
     required TResult orElse(),
   }) {
@@ -406,6 +421,7 @@ class _$CacheFailureImpl implements CacheFailure {
     required TResult Function(NetworkFailure value) network,
     required TResult Function(AuthFailure value) auth,
     required TResult Function(ValidationFailure value) validation,
+    required TResult Function(LocationFailure value) location,
     required TResult Function(UnknownFailure value) unknown,
   }) {
     return cache(this);
@@ -419,6 +435,7 @@ class _$CacheFailureImpl implements CacheFailure {
     TResult? Function(NetworkFailure value)? network,
     TResult? Function(AuthFailure value)? auth,
     TResult? Function(ValidationFailure value)? validation,
+    TResult? Function(LocationFailure value)? location,
     TResult? Function(UnknownFailure value)? unknown,
   }) {
     return cache?.call(this);
@@ -432,6 +449,7 @@ class _$CacheFailureImpl implements CacheFailure {
     TResult Function(NetworkFailure value)? network,
     TResult Function(AuthFailure value)? auth,
     TResult Function(ValidationFailure value)? validation,
+    TResult Function(LocationFailure value)? location,
     TResult Function(UnknownFailure value)? unknown,
     required TResult orElse(),
   }) {
@@ -536,6 +554,7 @@ class _$NetworkFailureImpl implements NetworkFailure {
     required TResult Function(String? message) network,
     required TResult Function(String? message) auth,
     required TResult Function(String? message) validation,
+    required TResult Function(String? message) location,
     required TResult Function(String? message) unknown,
   }) {
     return network(message);
@@ -549,6 +568,7 @@ class _$NetworkFailureImpl implements NetworkFailure {
     TResult? Function(String? message)? network,
     TResult? Function(String? message)? auth,
     TResult? Function(String? message)? validation,
+    TResult? Function(String? message)? location,
     TResult? Function(String? message)? unknown,
   }) {
     return network?.call(message);
@@ -562,6 +582,7 @@ class _$NetworkFailureImpl implements NetworkFailure {
     TResult Function(String? message)? network,
     TResult Function(String? message)? auth,
     TResult Function(String? message)? validation,
+    TResult Function(String? message)? location,
     TResult Function(String? message)? unknown,
     required TResult orElse(),
   }) {
@@ -579,6 +600,7 @@ class _$NetworkFailureImpl implements NetworkFailure {
     required TResult Function(NetworkFailure value) network,
     required TResult Function(AuthFailure value) auth,
     required TResult Function(ValidationFailure value) validation,
+    required TResult Function(LocationFailure value) location,
     required TResult Function(UnknownFailure value) unknown,
   }) {
     return network(this);
@@ -592,6 +614,7 @@ class _$NetworkFailureImpl implements NetworkFailure {
     TResult? Function(NetworkFailure value)? network,
     TResult? Function(AuthFailure value)? auth,
     TResult? Function(ValidationFailure value)? validation,
+    TResult? Function(LocationFailure value)? location,
     TResult? Function(UnknownFailure value)? unknown,
   }) {
     return network?.call(this);
@@ -605,6 +628,7 @@ class _$NetworkFailureImpl implements NetworkFailure {
     TResult Function(NetworkFailure value)? network,
     TResult Function(AuthFailure value)? auth,
     TResult Function(ValidationFailure value)? validation,
+    TResult Function(LocationFailure value)? location,
     TResult Function(UnknownFailure value)? unknown,
     required TResult orElse(),
   }) {
@@ -706,6 +730,7 @@ class _$AuthFailureImpl implements AuthFailure {
     required TResult Function(String? message) network,
     required TResult Function(String? message) auth,
     required TResult Function(String? message) validation,
+    required TResult Function(String? message) location,
     required TResult Function(String? message) unknown,
   }) {
     return auth(message);
@@ -719,6 +744,7 @@ class _$AuthFailureImpl implements AuthFailure {
     TResult? Function(String? message)? network,
     TResult? Function(String? message)? auth,
     TResult? Function(String? message)? validation,
+    TResult? Function(String? message)? location,
     TResult? Function(String? message)? unknown,
   }) {
     return auth?.call(message);
@@ -732,6 +758,7 @@ class _$AuthFailureImpl implements AuthFailure {
     TResult Function(String? message)? network,
     TResult Function(String? message)? auth,
     TResult Function(String? message)? validation,
+    TResult Function(String? message)? location,
     TResult Function(String? message)? unknown,
     required TResult orElse(),
   }) {
@@ -749,6 +776,7 @@ class _$AuthFailureImpl implements AuthFailure {
     required TResult Function(NetworkFailure value) network,
     required TResult Function(AuthFailure value) auth,
     required TResult Function(ValidationFailure value) validation,
+    required TResult Function(LocationFailure value) location,
     required TResult Function(UnknownFailure value) unknown,
   }) {
     return auth(this);
@@ -762,6 +790,7 @@ class _$AuthFailureImpl implements AuthFailure {
     TResult? Function(NetworkFailure value)? network,
     TResult? Function(AuthFailure value)? auth,
     TResult? Function(ValidationFailure value)? validation,
+    TResult? Function(LocationFailure value)? location,
     TResult? Function(UnknownFailure value)? unknown,
   }) {
     return auth?.call(this);
@@ -775,6 +804,7 @@ class _$AuthFailureImpl implements AuthFailure {
     TResult Function(NetworkFailure value)? network,
     TResult Function(AuthFailure value)? auth,
     TResult Function(ValidationFailure value)? validation,
+    TResult Function(LocationFailure value)? location,
     TResult Function(UnknownFailure value)? unknown,
     required TResult orElse(),
   }) {
@@ -879,6 +909,7 @@ class _$ValidationFailureImpl implements ValidationFailure {
     required TResult Function(String? message) network,
     required TResult Function(String? message) auth,
     required TResult Function(String? message) validation,
+    required TResult Function(String? message) location,
     required TResult Function(String? message) unknown,
   }) {
     return validation(message);
@@ -892,6 +923,7 @@ class _$ValidationFailureImpl implements ValidationFailure {
     TResult? Function(String? message)? network,
     TResult? Function(String? message)? auth,
     TResult? Function(String? message)? validation,
+    TResult? Function(String? message)? location,
     TResult? Function(String? message)? unknown,
   }) {
     return validation?.call(message);
@@ -905,6 +937,7 @@ class _$ValidationFailureImpl implements ValidationFailure {
     TResult Function(String? message)? network,
     TResult Function(String? message)? auth,
     TResult Function(String? message)? validation,
+    TResult Function(String? message)? location,
     TResult Function(String? message)? unknown,
     required TResult orElse(),
   }) {
@@ -922,6 +955,7 @@ class _$ValidationFailureImpl implements ValidationFailure {
     required TResult Function(NetworkFailure value) network,
     required TResult Function(AuthFailure value) auth,
     required TResult Function(ValidationFailure value) validation,
+    required TResult Function(LocationFailure value) location,
     required TResult Function(UnknownFailure value) unknown,
   }) {
     return validation(this);
@@ -935,6 +969,7 @@ class _$ValidationFailureImpl implements ValidationFailure {
     TResult? Function(NetworkFailure value)? network,
     TResult? Function(AuthFailure value)? auth,
     TResult? Function(ValidationFailure value)? validation,
+    TResult? Function(LocationFailure value)? location,
     TResult? Function(UnknownFailure value)? unknown,
   }) {
     return validation?.call(this);
@@ -948,6 +983,7 @@ class _$ValidationFailureImpl implements ValidationFailure {
     TResult Function(NetworkFailure value)? network,
     TResult Function(AuthFailure value)? auth,
     TResult Function(ValidationFailure value)? validation,
+    TResult Function(LocationFailure value)? location,
     TResult Function(UnknownFailure value)? unknown,
     required TResult orElse(),
   }) {
@@ -970,6 +1006,186 @@ abstract class ValidationFailure implements Failure {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ValidationFailureImplCopyWith<_$ValidationFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LocationFailureImplCopyWith<$Res>
+    implements $FailureCopyWith<$Res> {
+  factory _$$LocationFailureImplCopyWith(
+    _$LocationFailureImpl value,
+    $Res Function(_$LocationFailureImpl) then,
+  ) = __$$LocationFailureImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? message});
+}
+
+/// @nodoc
+class __$$LocationFailureImplCopyWithImpl<$Res>
+    extends _$FailureCopyWithImpl<$Res, _$LocationFailureImpl>
+    implements _$$LocationFailureImplCopyWith<$Res> {
+  __$$LocationFailureImplCopyWithImpl(
+    _$LocationFailureImpl _value,
+    $Res Function(_$LocationFailureImpl) _then,
+  ) : super(_value, _then);
+
+  /// Create a copy of Failure
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? message = freezed}) {
+    return _then(
+      _$LocationFailureImpl(
+        freezed == message
+            ? _value.message
+            : message // ignore: cast_nullable_to_non_nullable
+                  as String?,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class _$LocationFailureImpl implements LocationFailure {
+  const _$LocationFailureImpl([this.message]);
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'Failure.location(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LocationFailureImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of Failure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LocationFailureImplCopyWith<_$LocationFailureImpl> get copyWith =>
+      __$$LocationFailureImplCopyWithImpl<_$LocationFailureImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String? message) server,
+    required TResult Function(String? message) cache,
+    required TResult Function(String? message) network,
+    required TResult Function(String? message) auth,
+    required TResult Function(String? message) validation,
+    required TResult Function(String? message) location,
+    required TResult Function(String? message) unknown,
+  }) {
+    return location(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? server,
+    TResult? Function(String? message)? cache,
+    TResult? Function(String? message)? network,
+    TResult? Function(String? message)? auth,
+    TResult? Function(String? message)? validation,
+    TResult? Function(String? message)? location,
+    TResult? Function(String? message)? unknown,
+  }) {
+    return location?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? server,
+    TResult Function(String? message)? cache,
+    TResult Function(String? message)? network,
+    TResult Function(String? message)? auth,
+    TResult Function(String? message)? validation,
+    TResult Function(String? message)? location,
+    TResult Function(String? message)? unknown,
+    required TResult orElse(),
+  }) {
+    if (location != null) {
+      return location(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ServerFailure value) server,
+    required TResult Function(CacheFailure value) cache,
+    required TResult Function(NetworkFailure value) network,
+    required TResult Function(AuthFailure value) auth,
+    required TResult Function(ValidationFailure value) validation,
+    required TResult Function(LocationFailure value) location,
+    required TResult Function(UnknownFailure value) unknown,
+  }) {
+    return location(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ServerFailure value)? server,
+    TResult? Function(CacheFailure value)? cache,
+    TResult? Function(NetworkFailure value)? network,
+    TResult? Function(AuthFailure value)? auth,
+    TResult? Function(ValidationFailure value)? validation,
+    TResult? Function(LocationFailure value)? location,
+    TResult? Function(UnknownFailure value)? unknown,
+  }) {
+    return location?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ServerFailure value)? server,
+    TResult Function(CacheFailure value)? cache,
+    TResult Function(NetworkFailure value)? network,
+    TResult Function(AuthFailure value)? auth,
+    TResult Function(ValidationFailure value)? validation,
+    TResult Function(LocationFailure value)? location,
+    TResult Function(UnknownFailure value)? unknown,
+    required TResult orElse(),
+  }) {
+    if (location != null) {
+      return location(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LocationFailure implements Failure {
+  const factory LocationFailure([final String? message]) =
+      _$LocationFailureImpl;
+
+  @override
+  String? get message;
+
+  /// Create a copy of Failure
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$LocationFailureImplCopyWith<_$LocationFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1053,6 +1269,7 @@ class _$UnknownFailureImpl implements UnknownFailure {
     required TResult Function(String? message) network,
     required TResult Function(String? message) auth,
     required TResult Function(String? message) validation,
+    required TResult Function(String? message) location,
     required TResult Function(String? message) unknown,
   }) {
     return unknown(message);
@@ -1066,6 +1283,7 @@ class _$UnknownFailureImpl implements UnknownFailure {
     TResult? Function(String? message)? network,
     TResult? Function(String? message)? auth,
     TResult? Function(String? message)? validation,
+    TResult? Function(String? message)? location,
     TResult? Function(String? message)? unknown,
   }) {
     return unknown?.call(message);
@@ -1079,6 +1297,7 @@ class _$UnknownFailureImpl implements UnknownFailure {
     TResult Function(String? message)? network,
     TResult Function(String? message)? auth,
     TResult Function(String? message)? validation,
+    TResult Function(String? message)? location,
     TResult Function(String? message)? unknown,
     required TResult orElse(),
   }) {
@@ -1096,6 +1315,7 @@ class _$UnknownFailureImpl implements UnknownFailure {
     required TResult Function(NetworkFailure value) network,
     required TResult Function(AuthFailure value) auth,
     required TResult Function(ValidationFailure value) validation,
+    required TResult Function(LocationFailure value) location,
     required TResult Function(UnknownFailure value) unknown,
   }) {
     return unknown(this);
@@ -1109,6 +1329,7 @@ class _$UnknownFailureImpl implements UnknownFailure {
     TResult? Function(NetworkFailure value)? network,
     TResult? Function(AuthFailure value)? auth,
     TResult? Function(ValidationFailure value)? validation,
+    TResult? Function(LocationFailure value)? location,
     TResult? Function(UnknownFailure value)? unknown,
   }) {
     return unknown?.call(this);
@@ -1122,6 +1343,7 @@ class _$UnknownFailureImpl implements UnknownFailure {
     TResult Function(NetworkFailure value)? network,
     TResult Function(AuthFailure value)? auth,
     TResult Function(ValidationFailure value)? validation,
+    TResult Function(LocationFailure value)? location,
     TResult Function(UnknownFailure value)? unknown,
     required TResult orElse(),
   }) {
